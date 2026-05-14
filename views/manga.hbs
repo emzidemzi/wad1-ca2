@@ -1,0 +1,24 @@
+{{> menu}}
+
+<section class="ui container">
+  <h2 class="page-title">{{title}}</h2>
+
+  <div class="manga-grid">
+    {{#each manga}}
+      <div class="manga-card">
+        <img src="{{image}}" alt="{{title}}" class="manga-img" />
+        <div class="manga-info">
+          <div class="manga-title">{{title}}</div>
+          <div class="manga-details">
+            <p><strong>Author:</strong> {{author}}</p>
+            <p><strong>Genre:</strong> {{genre}}</p>
+            <p><strong>Publisher:</strong> {{publisher}}</p>
+            <p><strong>Release Date:</strong> {{release-date}}</p>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+  <a href="/dashboard" class="ui button back-btn">Back to Dashboard</a>
+</section>

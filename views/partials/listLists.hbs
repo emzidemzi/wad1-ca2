@@ -1,0 +1,80 @@
+<section class="ui left aligned middle aligned segment">
+
+  <section class="dashboard-header">
+
+  <h2 class="title">Manga List App Dashboard</h2>
+
+    <form action="/searchCategory" method="GET" class="ui form">
+
+      <div class="field">
+        <input type="text" name="searchTerm" placeholder="Search by title..." value="{{search}}">
+      </div>   
+
+    </form>
+
+</section>
+
+
+  {{#unless search}}
+  {{#unless lists}}
+    <h3 class="ui message">
+       Start adding your lists!
+    </h3>
+  {{/unless}}
+{{/unless}}
+
+
+  {{#each lists}}
+    <section class="ui left aligned middle aligned segment">
+
+      <h3 class="ui header">
+        {{uppercase title}}
+      </h3>
+
+      <p>
+        <i class="music icon"></i>
+        {{#if songs}}
+          Total songs:
+          {{books.length}}
+
+        {{else}}
+          Empty List!
+        {{/if}}
+
+        {{#if date}}
+          <br />
+          <i class="calendar alternate outline icon"></i>
+          Created on
+          <i>{{formatDate date}}</i>  <!-- using the formatDate helper to display the date in a more readable format -->
+        {{/if}}
+
+      </p>
+
+<!-- displaying rating -->  
+{{#if rating}}
+    <p>
+        <span 
+            class="ui yellow disabled rating" 
+            data-icon="star" 
+            data-rating="{{rating}}" 
+            data-max-rating="5">
+        </span>
+      
+        <span style="color: grey; font-size: 90%; font-style: italic">
+              {{highlightPopular rating}} <!-- custom helper -->
+        </span>
+    </p>
+{{/if}}
+
+
+
+      <a href="/playlist/{{id}}"><i
+          class="ui open folder outline black icon"
+        ></i></a>
+	  <a href="/dashboard/deleteplaylist/{{id}}">
+        <i class="ui trash black icon"></i>
+      </a>
+    </section>
+  {{/each}}
+
+</section>

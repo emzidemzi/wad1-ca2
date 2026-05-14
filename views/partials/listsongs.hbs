@@ -1,0 +1,42 @@
+<!-- must create two dofferent partials, one to edit and onne to display -->
+
+{{#if books}}
+
+  <table class="ui unstackable striped table">
+    <thead>
+      <tr>
+        <th class="four wide">Book</th>
+        <th class="four wide">Author</th>
+        <th class="two wide"> </th>
+        <th class="two wide"> </th>
+      </tr>
+    </thead>
+    <tbody>
+      
+      {{#each books}}
+      
+        {{> listOneBook playlistId=../id}}
+        {{> editbook playlistId=../id}}
+                
+      {{/each}}
+    
+    </tbody>
+  </table>
+
+{{else}}
+  <h3 class="ui message">
+    Empty List!
+  </h3>
+
+{{/if}}
+<script>
+      document.querySelector("#showEdit{{@index}}").addEventListener ('click', () => {
+            document.querySelector("#book{{@index}}").style.display = "none";
+            document.querySelector("#edit{{@index}}").style.display = "table-row";
+       })
+      document.querySelector("#hideEdit{{@index}}").addEventListener ('click', () => {
+            document.querySelector("#book{{@index}}").style.display = "table-row";
+            document.querySelector("#edit{{@index}}").style.display = "none";
+       })
+</script>
+

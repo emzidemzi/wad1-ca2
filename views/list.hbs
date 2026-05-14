@@ -1,0 +1,23 @@
+<!-- using the with helper, we now get {{singlePlaylist.title}} just as {{title}} -->
+
+{{> menu}}
+
+{{#with singleList}}
+
+  <section class="ui center aligned middle aligned scrolling segment">
+
+    <h2 class="ui header">
+       {{uppercase title}}
+    </h2>
+
+    {{> listbooks}}
+
+  </section>
+
+  <section class="ui center aligned middle aligned segment">
+
+    {{> addsong}}
+
+  </section>
+
+{{/with}}

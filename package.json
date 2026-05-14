@@ -1,0 +1,29 @@
+{
+  "name": "my-node-project",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "keywords": [
+    "node",
+    "express"
+  ],
+  "author": "Emma Dempsey",
+  "license": "ISC",
+  "description": "My First Node App",
+  "type": "module",
+  "dependencies": {
+    "body-parser": "^2.2.2",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.2.1",
+    "express-handlebars": "^9.0.1",
+    "lowdb": "^7.0.1",
+    "uuid": "^14.0.0",
+    "winston": "^3.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

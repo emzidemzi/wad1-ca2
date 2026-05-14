@@ -1,0 +1,17 @@
+<!--partial form view to add book -->
+
+<form class="ui stacked segment form" action="/playlist/{{id}}/addbook" method="POST">
+  <div class="two fields">
+    <div class="field">
+      <label>Title</label>
+      <input type="text" name="title" autofocus required title = "Please include a valid Title"
+	  placeholder="Title">
+    </div>
+    <div class="field">
+      <label>Author</label>
+      <input type="text" name="author" required title = "Please include a valid Author"
+	  placeholder="Author"  >
+    </div>
+  </div>
+  <button class="ui blue submit button">Add Book</button>
+</form>

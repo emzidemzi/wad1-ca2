@@ -1,0 +1,147 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: lightgrey;
+}
+
+.editSubmit {
+  border:none;
+  background: none;
+}
+.hide{
+    display: none;
+}
+
+table {
+  margin:auto
+}
+
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.name{
+  padding-top:22.5px;
+  padding-right:5px;
+  line-height:20px;
+  font-weight:bold;
+  text-transform:capitalize;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin: 2em;
+  background-color: lightgrey;
+}
+
+#startImg {
+  border-width: 10px;
+  border-style: solid;
+  border-color: rgb(61, 54, 68);
+  border-radius: 4px;
+  transition: all 0.3s ease-out;
+
+}
+
+#startImg:hover {
+  box-shadow: 0 0 2px 1px rgba(45, 104, 84, 0.5);
+  transform: scale(1.03);
+}
+
+header {
+  font-size: large;
+}
+
+
+/* manga page stuff */
+
+.page-title {
+  text-align: center;
+  margin-bottom: 1.5em;
+  font-size: 2rem;
+  color: #222;
+}
+
+/* layout */
+.manga-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Individual Manga Card */
+.manga-card {
+  display: flex;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  width: 350px;
+}
+
+.manga-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.manga-img {
+  width: 120px;
+  height: auto;
+  object-fit: cover;
+}
+
+.manga-info {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.manga-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.manga-details p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+}
+
+.back-btn {
+  display: block;
+  margin: 2rem auto 0;
+  background-color: #5a2ea6;
+  color: #fff;
+}
+
+.back-btn:hover {
+  background-color: #7b3edc;
+  color: #fff;
+}
